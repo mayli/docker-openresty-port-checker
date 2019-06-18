@@ -1,3 +1,4 @@
 FROM openresty/openresty:alpine-fat
 RUN luarocks install luasocket
-ADD conf.d/port.conf /etc/nginx/conf.d/default.conf
+COPY conf.d/port.conf /etc/nginx/conf.d/default.conf
+COPY nginx.conf /usr/local/openresty/nginx/conf/nginx.conf
